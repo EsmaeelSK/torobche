@@ -9,10 +9,8 @@ const setHeader = require('./middlewares/header');
 
 dotenv.config({path: './configs/config.env'});
 connectToDB();
-console.log('1')
 
 const app = express();
-console.log('2')
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());

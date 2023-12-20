@@ -30,26 +30,6 @@ const login = async (req, res, next) => {
     
 }
 
-// const forgotPassword = async (req, res, next) => {
-//     try{
-//         const { email } = req.query;
-//         const user = await User.findOne({ email });
-//         if(!user) throw new Error('با این ایمیل ثبت نام نکردی.');
-
-//         const token = bcrypt.hash(req.query, 10);
-//         user.token = token;
-//         const url = `/api/user/pass/${token}`;
-//         // send email
-        
-//         await user.save();
-//         return res.status(200).json();
-        
-//     } catch (err) {
-//         next(err);
-//     }
-
-// }
-
 const updateUser = async (req, res, next) => {
     try {
         const { name } = req.body;
